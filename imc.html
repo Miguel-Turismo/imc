@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de IMC</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="header">   
+<!-- para facilitar eu nomeio as div's com nomes pertinentes ao que estou fazendo. 
+    Nunca nomear div1, div2, div3, porque se não eu terei dificuldade em localizar.  -->
+        <h1>Calculo de IMC</h1>
+        <h2>Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela. </h2>
+
+    </div>
+
+    <div class="content">   
+        <!-- usei content porque aproveitei a nomenclatura do Figma, mas na verdade é o conteúdo*/ -->
+        <h3>Divide-se o peso do pela sua altura elevada ao quadrado</h3>
+        <p>Preencha os campos abaixo com o peso e a altura e clique no botão “calcular” para ter acesso ao seu resultado. Consulte a tabela para ver sua classificação.            
+        </p>
+        
+        <div class="content-imc">
+        <!-- área onde ficará o formulário e a tabela -->
+            <form autocomplete="off">
+                <!-- form action envia os dados para fora(informação) para outro lugar -->
+                <label for="peso">Informe o peso</label><br>
+                <input type="number" id="peso"><br>
+                <!-- br é uma quebra de linha -->
+                <!-- o label vincula o input ao texto -->
+                <!-- o checkbox ele faz com que passando o mouse sobre o texto ele marque
+                    a caixinha -->
+                <label for="altura">Informe a altura</label><br>
+                <input type="number" id="altura"><br>
+                <!-- CTRL ESPAÇO abre opções dentro do "", mas para isso entre "" 
+                    deve estar vazio, se tiver informação eu devo apagar -->
+                <button type="button" onclick="calcularIMC()">Calcular</button>
+                    <!-- type button impede que os dados(informação) vá para fora, para outro lugar -->
+
+                <div id="result"></div>             
+
+                 
+            </form>
+
+            <table>
+
+                <tr>
+                    <th>Referência</th>   
+                    <th>classificação</th>                 
+                </tr>
+
+                <tr>
+                    <td>Abaixo de 18.5</td>   
+                    <td>Magreza</td>                 
+                </tr>
+
+                <tr>
+                    <td>Entre 18.6 e 24.9</td>   
+                    <td>Normal</td>                 
+                </tr>
+
+                <tr>
+                    <td>Entre 25 e 29.9</td>   
+                    <td>Sobrepeso/td>                 
+                </tr>
+
+
+                <tr>
+                    <td>Entre 30 e 34.9</td>   
+                    <td>Obesidade</td>               
+                </tr>
+
+                <tr>
+                    <td>Entre 35 e 39.9</td>   
+                    <td>Obesidade grave</td>                 
+                </tr>
+
+                <tr>
+                    <td>A partir de 40</td>   
+                    <td>Obesidade grave II</td>                 
+                </tr>
+
+                
+            </table>
+
+        </div>
+
+
+    </div>
+
+    <div class="footer">
+        <!-- Footer é Rodapé; o <a> é para me direcionar para um site específico
+             e o target blank é para abrir uma outra aba-->
+        Projeto desenvolvido pela <a href="https://cotiinformatica.com.br" target="_blank">Coti Informática</a> 
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

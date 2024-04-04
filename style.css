@@ -1,0 +1,160 @@
+/*
+seletor {
+    propriedade:valor;
+}
+*/
+
+body{  
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.home {
+    background-color: #003366;
+}
+h1{
+    color:#ffffff; 
+    font-size: 48px;  
+    margin-top: 0;
+}
+h2{
+    color:#ffffff;  /*coloquei a letra branca*/
+    font-size: 32px;
+}
+.navegacao{
+    background-color: red;
+    width: 680px;
+    margin-top: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+/*formatando os links da área "a" lá no html (que são os links ou o botão) nagevação*/
+.navegacao a{
+
+
+    /*espaçamento do objeto para fora usa-se magin*/
+    margin-left: 18px;   /*espaçamento do objeto para fora usa-se magin*/
+    
+    margin-right: 18px;  /*espaçamento do objeto para fora usa-se magin*/
+    
+}
+
+
+.header{
+    background-image: url(img/background-imc.jpg);/* foi buscar a imagem */
+    background-size: cover; /* faz com que a imagem cubra toda a área, ou seja, 
+    se eu der um zoom ele vai ajustar a imagem e o texto de acordo com o espaço 
+    da tela do computador ou do celular*/
+    text-align: center;     /* centralizou o texto*/
+
+    padding-top: 75px;  /*espaçamento do objeto para dentro usa-se padding*/
+    padding-bottom: 75px;   /*espaçamento do objeto para dentro usa-se padding*/
+    padding-left: 180px;
+    padding-right: 180px;
+}
+.content{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    color: #555555;
+}
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+.content-imc{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-imc input{
+    /* width é a largura; height é a altura; border-radius é a propriedade para arredondamento */
+    width: 300px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;    
+    margin-bottom: 10px;    /* margin-bottom é a margem para baixo */
+
+    
+    box-sizing: border-box; /* box-sizng:border-box faz com que o elemento se mantenha no espaço definido
+    para o box, sem ultrapassar as dimensões definidas no padding a border */
+}
+
+.content-imc button{
+    width: 130px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    background-color: #003366;
+    color: #ffffff;    
+    cursor: pointer;    /* cursor pointer é a mãozinha */
+}
+/*      :hover é para ao passar o mouse. Pode ser para a cor mudar, ou outra coisa qualquer acontecer. 
+No caso específico é para mudar a cor num ponto específico. No caso utilizei para o content-imc button */
+.content-imc button:hover{
+    background-color: #0050a0;
+}
+.content-imc table{
+    width: 350px;
+    
+    text-align: center; /* text-align center é para centralizar */    
+    font-size: 14px;    /* font-size é para definir o tamanho */
+}
+/* th são os cabeçalhos e tr são todas as linhas */
+.content-imc tr{
+    background-color: #d9d9d9;
+}
+.content-imc tr:hover{
+    background-color: #c7e9f8;
+}
+.content-imc th{
+    background-color: #003366;
+    color: #ffffff;
+}
+
+.footer{
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.footer a{
+    color: #ffffff;
+}
+.footer a:houver{
+    color: #c7f8d6;
+}
+/* Para telas de no máximo para 768px, cria-se um "if" uma condição, 
+um SE que é utilizando-se   @media     que é um comando chamado de media queries */
+
+@media (max-width: 768px) {
+    
+    h1{
+        font-size: 32px;
+    }
+    
+    h2{
+        font-size: 20px;
+    }
+    .header{
+        padding-top: 90px;
+        padding-bottom: 90px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .content{
+        width: 95%;
+    }
+    .content-imc{
+        flex-direction: column;        
+        row-gap: 20px;  /* espaço entre as linhas row-gap */
+}
+    .content-imc table, .content-imc input{
+        width: 100%;
+    }
+
+
+
+}
